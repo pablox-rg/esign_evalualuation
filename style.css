@@ -1,0 +1,8 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+label, p { font-weight: bold; }
+button { padding: 10px; background-color: #4CAF50; color: white; border: none; }
