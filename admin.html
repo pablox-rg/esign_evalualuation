@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administración de Evaluación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Administración de Evaluación</h1>
+    <h2>Agregar/Editar Preguntas</h2>
+    <form id="questionForm">
+        <label for="questionText">Texto de la Pregunta:</label><br>
+        <input type="text" id="questionText" required><br><br>
+        <label for="questionType">Tipo:</label><br>
+        <select id="questionType">
+            <option value="multiple">Opción Múltiple</option>
+            <option value="text">Texto Abierto</option>
+        </select><br><br>
+        <label for="correctAnswer">Respuesta Correcta:</label><br>
+        <input type="text" id="correctAnswer"><br><br>
+        <label for="points">Puntos:</label><br>
+        <input type="number" id="points" min="1" required><br><br>
+        <button type="submit">Guardar Pregunta</button>
+    </form>
+
+    <h2>Preguntas Actuales</h2>
+    <ul id="questionList"></ul>
+
+    <h2>Resultados de Evaluaciones</h2>
+    <ul id="evaluationList"></ul>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
